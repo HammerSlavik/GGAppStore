@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1B05E6A02BF67B74006F403A /* GGAppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E69F2BF67B74006F403A /* GGAppStoreApp.swift */; };
-		1B05E6A22BF67B74006F403A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6A12BF67B74006F403A /* ContentView.swift */; };
+		1B05E6A22BF67B74006F403A /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6A12BF67B74006F403A /* AppsView.swift */; };
 		1B05E6A42BF67B76006F403A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B05E6A32BF67B76006F403A /* Assets.xcassets */; };
 		1B05E6A72BF67B76006F403A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B05E6A62BF67B76006F403A /* Preview Assets.xcassets */; };
 		1B05E6B12BF67B76006F403A /* GGAppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6B02BF67B76006F403A /* GGAppStoreTests.swift */; };
 		1B05E6BB2BF67B76006F403A /* GGAppStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6BA2BF67B76006F403A /* GGAppStoreUITests.swift */; };
 		1B05E6BD2BF67B76006F403A /* GGAppStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6BC2BF67B76006F403A /* GGAppStoreUITestsLaunchTests.swift */; };
+		1B05E6CA2BF67DB2006F403A /* HeaderCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6C92BF67DB2006F403A /* HeaderCategoryView.swift */; };
+		1B05E6CC2BF67E27006F403A /* PreviewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6CB2BF67E27006F403A /* PreviewCategoryView.swift */; };
+		1B05E6CE2BF67E5D006F403A /* SmallGridCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6CD2BF67E5D006F403A /* SmallGridCategoryView.swift */; };
+		1B05E6D02BF67E85006F403A /* LargeGridCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6CF2BF67E85006F403A /* LargeGridCategoryView.swift */; };
+		1B05E6D22BF6802B006F403A /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6D12BF6802B006F403A /* FooterView.swift */; };
+		1B05E6D42BF680FF006F403A /* HeaderAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6D32BF680FF006F403A /* HeaderAppView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,7 @@
 /* Begin PBXFileReference section */
 		1B05E69C2BF67B74006F403A /* GGAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B05E69F2BF67B74006F403A /* GGAppStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGAppStoreApp.swift; sourceTree = "<group>"; };
-		1B05E6A12BF67B74006F403A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1B05E6A12BF67B74006F403A /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
 		1B05E6A32BF67B76006F403A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B05E6A62BF67B76006F403A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B05E6AC2BF67B76006F403A /* GGAppStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGAppStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +50,12 @@
 		1B05E6B62BF67B76006F403A /* GGAppStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGAppStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B05E6BA2BF67B76006F403A /* GGAppStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGAppStoreUITests.swift; sourceTree = "<group>"; };
 		1B05E6BC2BF67B76006F403A /* GGAppStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGAppStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B05E6C92BF67DB2006F403A /* HeaderCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryView.swift; sourceTree = "<group>"; };
+		1B05E6CB2BF67E27006F403A /* PreviewCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCategoryView.swift; sourceTree = "<group>"; };
+		1B05E6CD2BF67E5D006F403A /* SmallGridCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGridCategoryView.swift; sourceTree = "<group>"; };
+		1B05E6CF2BF67E85006F403A /* LargeGridCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeGridCategoryView.swift; sourceTree = "<group>"; };
+		1B05E6D12BF6802B006F403A /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		1B05E6D32BF680FF006F403A /* HeaderAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAppView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				1B05E69F2BF67B74006F403A /* GGAppStoreApp.swift */,
-				1B05E6A12BF67B74006F403A /* ContentView.swift */,
+				1B05E6A12BF67B74006F403A /* AppsView.swift */,
+				1B05E6C92BF67DB2006F403A /* HeaderCategoryView.swift */,
+				1B05E6D32BF680FF006F403A /* HeaderAppView.swift */,
+				1B05E6CB2BF67E27006F403A /* PreviewCategoryView.swift */,
+				1B05E6CF2BF67E85006F403A /* LargeGridCategoryView.swift */,
+				1B05E6CD2BF67E5D006F403A /* SmallGridCategoryView.swift */,
+				1B05E6D12BF6802B006F403A /* FooterView.swift */,
 				1B05E6A32BF67B76006F403A /* Assets.xcassets */,
 				1B05E6A52BF67B76006F403A /* Preview Content */,
 			);
@@ -257,8 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B05E6A22BF67B74006F403A /* ContentView.swift in Sources */,
+				1B05E6D02BF67E85006F403A /* LargeGridCategoryView.swift in Sources */,
+				1B05E6D22BF6802B006F403A /* FooterView.swift in Sources */,
+				1B05E6CE2BF67E5D006F403A /* SmallGridCategoryView.swift in Sources */,
+				1B05E6D42BF680FF006F403A /* HeaderAppView.swift in Sources */,
+				1B05E6A22BF67B74006F403A /* AppsView.swift in Sources */,
 				1B05E6A02BF67B74006F403A /* GGAppStoreApp.swift in Sources */,
+				1B05E6CA2BF67DB2006F403A /* HeaderCategoryView.swift in Sources */,
+				1B05E6CC2BF67E27006F403A /* PreviewCategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
