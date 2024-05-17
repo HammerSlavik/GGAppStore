@@ -9,7 +9,19 @@ import SwiftUI
 
 struct PreviewCategoryView: View {
     var body: some View {
-        Text("PreviewCategory")
+		VStack(alignment: .leading) {
+			Text("Designed for Accessibility")
+			ScrollView(.horizontal) {
+				HStack {
+					ForEach(0..<5) { index in
+						PreviewAppView()
+							.frame(width: UIScreen.main.bounds.width * 0.58)
+					}
+				}
+			}
+			.scrollTargetLayout()
+			.scrollTargetBehavior(.viewAligned)
+		}
     }
 }
 

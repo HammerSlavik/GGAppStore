@@ -8,12 +8,6 @@
 import SwiftUI
 
 struct HeaderAppView: View {
-	private var width: CGFloat {
-		UIScreen.main.bounds.width - 40
-	}
-	private var height: CGFloat {
-		width / 1.55
-	}
     var body: some View {
 		VStack(alignment: .leading) {
 			Text("PlantIn: Plant Snap Identifier")
@@ -55,7 +49,7 @@ struct HeaderAppView: View {
 				.frame(height: 32)
 				.padding()
 			}
-			.frame(width: width, height: height)
+			.aspectRatio(1.55, contentMode: .fit)
 		}
     }
 }
