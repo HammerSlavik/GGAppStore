@@ -13,7 +13,13 @@ struct PreviewAppView: View {
 			Image(.appPreviewPlantIn)
 				.resizable()
 				.aspectRatio(contentMode: .fit)
+				.clipShape(.rect(cornerRadius: 5))
+				.overlay(
+					RoundedRectangle(cornerRadius: 5)
+						.strokeBorder(Color(white: 0.35).opacity(0.15), lineWidth: 1)
+				)
 			Text("Track Your Hearing Health in Mimi")
+				.font(.system(size: 16, weight: .light))
 		}
     }
 }

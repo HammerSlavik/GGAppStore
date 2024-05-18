@@ -46,10 +46,6 @@ struct AppsView: View {
 				LargeGridCategoryView()
 				Spacer()
 					.frame(height: 30)
-				Image(systemName: "globe")
-					.imageScale(.large)
-					.foregroundStyle(.tint)
-				Text("Hello, world!")
 			}
 //			.scrollClipDisabled()
 			.safeAreaPadding(.horizontal, 20)

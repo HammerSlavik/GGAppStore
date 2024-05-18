@@ -9,15 +9,24 @@ import SwiftUI
 
 struct LargeGridAppView: View {
     var body: some View {
-		HStack(alignment: .bottom) {
+		HStack(spacing: 10) {
 			Image(.appIconPlantIn)
 				.resizable()
 				.aspectRatio(contentMode: .fit)
+				.clipShape(.rect(cornerRadius: 20))
+				.overlay(
+					RoundedRectangle(cornerRadius: 20)
+						.strokeBorder(Color(white: 0.35).opacity(0.15), lineWidth: 1)
+				)
 			VStack(alignment: .leading) {
 				Text("PlantIn: Plant Snap Identifier saasdasdf asd sadasdsa dsad asd asd asd asd asd")
-					.font(.callout)
+					.font(.system(size: 18))
+					.fontWeight(.regular)
+				Spacer()
+					.frame(height: 2)
 				Text("AI plant identifier sad asd asd sad asdasd asd sad sa dadasdasda")
-					.font(.caption)
+					.font(.system(size: 14))
+					.fontWeight(.regular)
 					.foregroundStyle(.gray)
 				Spacer()
 				HStack {
@@ -26,10 +35,10 @@ struct LargeGridAppView: View {
 					} label: {
 						Text("GET")
 							.frame(width: 72, height: 28)
-							.background(Color.gray.opacity(0.2))
+							.background(Color.gray.opacity(0.15))
 							.clipShape(Capsule())
-							.font(.system(size: 14))
-							.fontWeight(.semibold)
+							.font(.callout)
+							.fontWeight(.bold)
 					}
 					Text("In-App\nPurchases")
 						.font(.system(size: 8))

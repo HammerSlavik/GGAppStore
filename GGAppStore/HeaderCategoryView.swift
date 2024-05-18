@@ -10,7 +10,7 @@ import SwiftUI
 struct HeaderCategoryView: View {
     var body: some View {
 		ScrollView(.horizontal) {
-			HStack {
+			HStack(spacing: 10) {
 				ForEach(0..<5) { index in
 					HeaderAppView()
 						.containerRelativeFrame(.horizontal)
@@ -19,6 +19,7 @@ struct HeaderCategoryView: View {
 		}
 		.scrollTargetLayout()
 		.scrollTargetBehavior(.viewAligned(limitBehavior: .always))
+		.scrollIndicators(.hidden)
     }
 }
 

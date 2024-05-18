@@ -11,6 +11,8 @@ struct PreviewCategoryView: View {
     var body: some View {
 		VStack(alignment: .leading) {
 			Text("Designed for Accessibility")
+				.font(.title2)
+				.fontWeight(.semibold)
 			ScrollView(.horizontal) {
 				HStack {
 					ForEach(0..<5) { index in
@@ -21,6 +23,7 @@ struct PreviewCategoryView: View {
 			}
 			.scrollTargetLayout()
 			.scrollTargetBehavior(.viewAligned)
+			.scrollIndicators(.hidden)
 		}
     }
 }
