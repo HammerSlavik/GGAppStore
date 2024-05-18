@@ -47,7 +47,7 @@ struct HeaderAppView: View {
 					}
 				}
 				.frame(height: 32)
-				.padding()
+				.padding(.bottom)
 			}
 			.aspectRatio(1.55, contentMode: .fit)
 		}

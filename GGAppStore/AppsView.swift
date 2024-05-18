@@ -51,8 +51,8 @@ struct AppsView: View {
 					.foregroundStyle(.tint)
 				Text("Hello, world!")
 			}
-			.padding(20)
-			.scrollClipDisabled()
+//			.scrollClipDisabled()
+			.safeAreaPadding(.horizontal, 20)
 		}
     }
 }
