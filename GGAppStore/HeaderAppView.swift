@@ -33,7 +33,7 @@ struct HeaderAppView: View {
 				.containerRelativeFrame(.horizontal)
 				.overlay(alignment: .bottom) {
 					Rectangle()
-						.frame(height: 64)
+						.frame(height: 68)
 						.foregroundStyle(.clear)
 						.background(.ultraThinMaterial)
 						.environment(\.colorScheme, bottomPanelAppearance.colorScheme)
@@ -57,9 +57,9 @@ struct HeaderAppView: View {
 								.foregroundStyle(bottomPanelAppearance.subtitleColor)
 						}
 						Spacer()
-						VStack(spacing: 3) {
+						VStack(spacing: 4) {
 							Spacer()
-								.frame(height: 11)
+								.frame(height: 10)
 							Button {} label: {
 								Text("GET")
 									.frame(width: 72, height: 28)
@@ -75,7 +75,7 @@ struct HeaderAppView: View {
 						}
 					}
 					.frame(height: 36)
-					.padding(.horizontal, 13)
+					.padding(.horizontal, 14)
 				}
 				.clipShape(.rect(cornerRadius: 5))
 				.overlay(
