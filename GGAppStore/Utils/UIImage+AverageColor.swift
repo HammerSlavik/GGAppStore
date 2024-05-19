@@ -2,7 +2,7 @@
 //  UIImage+AverageColor.swift
 //  GGAppStore
 //
-//  Created by Sviatoslav Yakobchuk on 19.05.2024.
+//  Created by Sviatoslav Yakobchuk on 18.05.2024.
 //
 
 import UIKit

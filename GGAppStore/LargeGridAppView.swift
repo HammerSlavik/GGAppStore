@@ -2,7 +2,7 @@
 //  LargeGridAppView.swift
 //  GGAppStore
 //
-//  Created by Sviatoslav Yakobchuk on 18.05.2024.
+//  Created by Sviatoslav Yakobchuk on 17.05.2024.
 //
 
 import SwiftUI
