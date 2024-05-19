@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SmallGridAppView: View {
+	var model: AppInfo
     var body: some View {
 		HStack(spacing: 10) {
-			Image(.appIconPlantIn)
+			Image(model.iconName)
 				.resizable()
 				.aspectRatio(contentMode: .fit)
 				.clipShape(.rect(cornerRadius: 14))
@@ -19,15 +20,16 @@ struct SmallGridAppView: View {
 						.strokeBorder(Color(white: 0.35).opacity(0.15), lineWidth: 1)
 				)
 			VStack(alignment: .leading, spacing: 2) {
-				Text("VivaVideo - Video Editor&Maker")
+				Text(model.title)
 					.font(.system(size: 18))
 					.fontWeight(.regular)
-				Text("Photo Media Maker with Multiple something")
+				Text(model.subtitle)
 					.font(.system(size: 14))
 					.fontWeight(.regular)
 					.foregroundStyle(.gray)
 					.lineLimit(1)
 			}
+			.frame(maxWidth: .infinity, alignment: .leading)
 			VStack(spacing: 5) {
 				Spacer()
 					.frame(height: 12)
@@ -52,5 +54,5 @@ struct SmallGridAppView: View {
 }
 
 #Preview {
-    SmallGridAppView()
+    SmallGridAppView(model: MockData.apps[0])
 }

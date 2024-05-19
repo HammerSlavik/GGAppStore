@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct PreviewAppView: View {
+	var model: AppInfo
     var body: some View {
 		VStack(alignment: .leading) {
-			Image(.appPreviewPlantIn)
+			Image(model.previewImageName)
 				.resizable()
-				.aspectRatio(contentMode: .fit)
+				.aspectRatio(contentMode: .fill)
+				.aspectRatio(16/10, contentMode: .fit)
+				.containerRelativeFrame(.horizontal, { width, _ in width * 0.6 })
 				.clipShape(.rect(cornerRadius: 5))
 				.overlay(
 					RoundedRectangle(cornerRadius: 5)
 						.strokeBorder(Color(white: 0.35).opacity(0.15), lineWidth: 1)
 				)
-			Text("Track Your Hearing Health in Mimi")
+			Text(model.previewTitle)
 				.font(.system(size: 16, weight: .light))
 		}
+		.containerRelativeFrame(.horizontal, { width, _ in width * 0.6 })
     }
 }
 
 #Preview {
-    PreviewAppView()
+    PreviewAppView(model: MockData.apps[5])
 }

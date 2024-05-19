@@ -8,15 +8,17 @@
 import SwiftUI
 
 private let iconSide: CGFloat = 62
+private let spacing: CGFloat = 10
 
 struct SmallGridCategoryView: View {
-	private var gridItemLayout = [GridItem(.fixed(iconSide)),
+	var models: [AppInfo]
+	private let gridItemLayout = [GridItem(.fixed(iconSide)),
 								  GridItem(.fixed(1/UIScreen.main.scale)),
 								  GridItem(.fixed(iconSide)),
 								  GridItem(.fixed(1/UIScreen.main.scale)),
 								  GridItem(.fixed(iconSide))]
 	var body: some View {
-		VStack {
+		VStack(spacing: 6) {
 			HStack {
 				Text("Must-Have Apps")
 					.font(.title2)
@@ -27,13 +29,13 @@ struct SmallGridCategoryView: View {
 				})
 			}
 			ScrollView(.horizontal) {
-				LazyHGrid(rows: gridItemLayout, spacing: 10) {
-					ForEach(0..<7) { index in
-						SmallGridAppView()
+				LazyHGrid(rows: gridItemLayout, spacing: spacing) {
+					ForEach(Array(models.enumerated()), id: \.offset) { index, model in
+						SmallGridAppView(model: model)
 							.containerRelativeFrame(.horizontal)
 						if index % 3 != 2 {
 							GridDivider()
-								.padding(.leading, iconSide + 8)
+								.padding(.leading, iconSide + spacing)
 						}
 					}
 				}
@@ -46,5 +48,5 @@ struct SmallGridCategoryView: View {
 }
 
 #Preview {
-    SmallGridCategoryView()
+	SmallGridCategoryView(models: MockData.apps)
 }

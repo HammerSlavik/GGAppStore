@@ -54,6 +54,24 @@ struct MockData {
 			previewSubtitle: "A fun way to learn a language",
 			iconName: "App_Icon_Duolingo",
 			previewImageName: "App_Preview_Duolingo"
+		),
+		.init(
+			id: NSUUID().uuidString,
+			title: "MEGOGO: TV, Movie, Audiobooks",
+			subtitle: "Watch Series, Cartoons, Shows",
+			previewTitle: "MEGOGO: TV, Movie, Audiobooks",
+			previewSubtitle: "Watch Series, Cartoons, Shows",
+			iconName: "App_Icon_Megogo",
+			previewImageName: "App_Preview_Megogo"
+		),
+		.init(
+			id: NSUUID().uuidString,
+			title: "Blinkist: Big Ideas in 15 Min",
+			subtitle: "Listen. Read. Learn.",
+			previewTitle: "Blinkist: Big Ideas in 15 Min",
+			previewSubtitle: "Listen. Read. Learn.",
+			iconName: "App_Icon_Blinkist",
+			previewImageName: "App_Preview_Blinkist"
 		)
 	]
 }

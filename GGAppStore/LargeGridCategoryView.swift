@@ -8,30 +8,32 @@
 import SwiftUI
 
 private let iconSide: CGFloat = 88
+private let spacing: CGFloat = 10
 
 struct LargeGridCategoryView: View {
-	private var gridItemLayout = [GridItem(.fixed(iconSide)),
+	var models: [AppInfo]
+	private let gridItemLayout = [GridItem(.fixed(iconSide)),
 								  GridItem(.fixed(1/UIScreen.main.scale)),
 								  GridItem(.fixed(iconSide))]
 	var body: some View {
-		VStack {
+		VStack(spacing: 6) {
 			HStack {
 				Text("iPhone Essentials")
 					.font(.title2)
 					.fontWeight(.semibold)
 				Spacer()
-				Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+				Button(action: {}, label: {
 					Text("See All")
 				})
 			}
 			ScrollView(.horizontal) {
-				LazyHGrid(rows: gridItemLayout, spacing: 10) {
-					ForEach(0..<7) { index in
-						LargeGridAppView()
+				LazyHGrid(rows: gridItemLayout, spacing: spacing) {
+					ForEach(Array(models.enumerated()), id: \.offset) { index, model in
+						LargeGridAppView(model: model)
 							.containerRelativeFrame(.horizontal)
 						if index % 2 != 1 {
 							GridDivider()
-								.padding(.leading, iconSide + 8)
+								.padding(.leading, iconSide + spacing)
 						}
 					}
 				}
@@ -44,5 +46,5 @@ struct LargeGridCategoryView: View {
 }
 
 #Preview {
-    LargeGridCategoryView()
+	LargeGridCategoryView(models: MockData.apps)
 }

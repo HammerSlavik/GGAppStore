@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HeaderAppView: View {
-	var model: HeaderAppViewModel
+	var model: AppInfo
 	var isLightBackground: Bool {
-		UIImage(named: model.app.previewImageName)?.averageColor?.isLight() ?? false
+		UIImage(named: model.previewImageName)?.averageColor?.isLight() ?? false
 	}
 	var bottomPanelAppearance: BottomPanelAppearance {
 		isLightBackground ? BottomPanelDarkAppearance() : BottomPanelLightAppearance()
@@ -21,14 +21,16 @@ struct HeaderAppView: View {
 				.font(.caption2)
 				.fontWeight(.medium)
 				.foregroundStyle(.blue)
-			Text(model.app.previewTitle)
+			Text(model.previewTitle)
 				.font(.title2)
-			Text(model.app.previewSubtitle)
+			Text(model.previewSubtitle)
 				.font(.title3)
 				.foregroundStyle(.gray)
-			Image(model.app.previewImageName)
+			Image(model.previewImageName)
 				.resizable()
-				.aspectRatio(1.55, contentMode: .fit)
+				.aspectRatio(contentMode: .fill)
+				.aspectRatio(16/10, contentMode: .fit)
+				.containerRelativeFrame(.horizontal)
 				.overlay(alignment: .bottom) {
 					Rectangle()
 						.frame(height: 64)
@@ -37,7 +39,7 @@ struct HeaderAppView: View {
 						.environment(\.colorScheme, bottomPanelAppearance.colorScheme)
 						.mask(LinearGradient(gradient: Gradient(colors: [.black, .black.opacity(0.8), .black.opacity(0.75), .clear]), startPoint: .bottom, endPoint: .top))
 					HStack {
-						Image(model.app.iconName)
+						Image(model.iconName)
 							.resizable()
 							.frame(width: 36, height: 36)
 							.clipShape(.rect(cornerRadius: 7))
@@ -46,10 +48,10 @@ struct HeaderAppView: View {
 									.strokeBorder(Color(white: 0.35).opacity(0.15), lineWidth: 1)
 							)
 						VStack(alignment: .leading) {
-							Text(model.app.title)
+							Text(model.title)
 								.font(.callout)
 								.foregroundStyle(bottomPanelAppearance.titleColor)
-							Text(model.app.subtitle)
+							Text(model.subtitle)
 								.font(.caption)
 								.fontWeight(.light)
 								.foregroundStyle(bottomPanelAppearance.subtitleColor)
@@ -58,9 +60,7 @@ struct HeaderAppView: View {
 						VStack(spacing: 3) {
 							Spacer()
 								.frame(height: 11)
-							Button {
-								
-							} label: {
+							Button {} label: {
 								Text("GET")
 									.frame(width: 72, height: 28)
 									.background(bottomPanelAppearance.buyButtonColor)
@@ -111,5 +111,5 @@ struct BottomPanelDarkAppearance: BottomPanelAppearance {
 }
 
 #Preview {
-    HeaderAppView(model: HeaderAppViewModel(app: MockData.apps[0]))
+    HeaderAppView(model: MockData.apps[0])
 }

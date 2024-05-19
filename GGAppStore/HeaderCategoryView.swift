@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HeaderCategoryView: View {
-	var models: [HeaderAppViewModel]
+	var models: [AppInfo]
     var body: some View {
 		ScrollView(.horizontal) {
 			HStack(spacing: 10) {
@@ -25,5 +25,5 @@ struct HeaderCategoryView: View {
 }
 
 #Preview {
-	return HeaderCategoryView(models: MockData.apps.map{ HeaderAppViewModel(app:$0) })
+	HeaderCategoryView(models: MockData.apps)
 }

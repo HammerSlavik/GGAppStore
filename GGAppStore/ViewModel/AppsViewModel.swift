@@ -8,7 +8,7 @@
 import Foundation
 
 class AppsViewModel: ObservableObject {
-	@Published var headerAppViewModels = [HeaderAppViewModel]()
+	@Published var appInfos = [AppInfo]()
 	
 	private let service: AppViewService
 	
@@ -19,7 +19,7 @@ class AppsViewModel: ObservableObject {
 	
 	func fetchHeaderAppViewModels() async {
 		do {
-			headerAppViewModels = try await service.fetchHeaderAppViewModels()
+			appInfos = try await service.fetchHeaderAppViewModels()
 		} catch {
 			print("DEBUG: Failed to fetch headerAppViewModels with error: \(error)")
 		}

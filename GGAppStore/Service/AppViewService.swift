@@ -8,7 +8,7 @@
 import Foundation
 
 struct AppViewService {
-	func fetchHeaderAppViewModels() async throws -> [HeaderAppViewModel] {
-		MockData.apps.map{ HeaderAppViewModel(app:$0) }
+	func fetchHeaderAppViewModels() async throws -> [AppInfo] {
+		MockData.apps
 	}
 }

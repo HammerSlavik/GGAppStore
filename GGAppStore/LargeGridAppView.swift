@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct LargeGridAppView: View {
+	var model: AppInfo
     var body: some View {
 		HStack(spacing: 10) {
-			Image(.appIconPlantIn)
+			Image(model.iconName)
 				.resizable()
 				.aspectRatio(contentMode: .fit)
 				.clipShape(.rect(cornerRadius: 20))
@@ -19,12 +20,12 @@ struct LargeGridAppView: View {
 						.strokeBorder(Color(white: 0.35).opacity(0.15), lineWidth: 1)
 				)
 			VStack(alignment: .leading) {
-				Text("PlantIn: Plant Snap Identifier saasdasdf asd sadasdsa dsad asd asd asd asd asd")
+				Text(model.title)
 					.font(.system(size: 18))
 					.fontWeight(.regular)
 				Spacer()
 					.frame(height: 2)
-				Text("AI plant identifier sad asd asd sad asdasd asd sad sa dadasdasda")
+				Text(model.subtitle)
 					.font(.system(size: 14))
 					.fontWeight(.regular)
 					.foregroundStyle(.gray)
@@ -47,9 +48,10 @@ struct LargeGridAppView: View {
 			}
 		}
 		.frame(height: 88)
+		.frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
 #Preview {
-    LargeGridAppView()
+    LargeGridAppView(model: MockData.apps[3])
 }

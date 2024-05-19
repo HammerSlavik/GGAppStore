@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct PreviewCategoryView: View {
+	var models: [AppInfo]
     var body: some View {
-		VStack(alignment: .leading) {
-			Text("Designed for Accessibility")
+		VStack(alignment: .leading, spacing: 6) {
+			Text("Our Top Ten...")
 				.font(.title2)
 				.fontWeight(.semibold)
 			ScrollView(.horizontal) {
-				HStack {
-					ForEach(0..<5) { index in
-						PreviewAppView()
-							.frame(width: UIScreen.main.bounds.width * 0.58)
+				HStack(alignment: .top) {
+					ForEach(models) { model in
+						PreviewAppView(model: model)
 					}
 				}
 			}
@@ -29,5 +29,5 @@ struct PreviewCategoryView: View {
 }
 
 #Preview {
-    PreviewCategoryView()
+    PreviewCategoryView(models: MockData.apps)
 }
