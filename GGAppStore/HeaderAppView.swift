@@ -8,18 +8,25 @@
 import SwiftUI
 
 struct HeaderAppView: View {
+	var model: HeaderAppViewModel
+	var isLightBackground: Bool {
+		UIImage(named: model.app.previewImageName)?.averageColor?.isLight() ?? false
+	}
+	var bottomPanelAppearance: BottomPanelAppearance {
+		isLightBackground ? BottomPanelDarkAppearance() : BottomPanelLightAppearance()
+	}
     var body: some View {
 		VStack(alignment: .leading) {
 			Text("FEATURED")
 				.font(.caption2)
 				.fontWeight(.medium)
 				.foregroundStyle(.blue)
-			Text("PlantIn: Plant Snap Identifier")
+			Text(model.app.previewTitle)
 				.font(.title2)
-			Text("AI plant identifier")
+			Text(model.app.previewSubtitle)
 				.font(.title3)
 				.foregroundStyle(.gray)
-			Image(.appPreviewPlantIn)
+			Image(model.app.previewImageName)
 				.resizable()
 				.aspectRatio(1.55, contentMode: .fit)
 				.overlay(alignment: .bottom) {
@@ -27,9 +34,10 @@ struct HeaderAppView: View {
 						.frame(height: 64)
 						.foregroundStyle(.clear)
 						.background(.ultraThinMaterial)
-						.mask(LinearGradient(gradient: Gradient(colors: [.black, .black.opacity(0.7), .clear]), startPoint: .bottom, endPoint: .top))
+						.environment(\.colorScheme, bottomPanelAppearance.colorScheme)
+						.mask(LinearGradient(gradient: Gradient(colors: [.black, .black.opacity(0.8), .black.opacity(0.75), .clear]), startPoint: .bottom, endPoint: .top))
 					HStack {
-						Image(.appIconPlantIn)
+						Image(model.app.iconName)
 							.resizable()
 							.frame(width: 36, height: 36)
 							.clipShape(.rect(cornerRadius: 7))
@@ -38,21 +46,24 @@ struct HeaderAppView: View {
 									.strokeBorder(Color(white: 0.35).opacity(0.15), lineWidth: 1)
 							)
 						VStack(alignment: .leading) {
-							Text("PlantIn: Plant Snap Identifier")
+							Text(model.app.title)
 								.font(.callout)
-							Text("AI plant identifier")
+								.foregroundStyle(bottomPanelAppearance.titleColor)
+							Text(model.app.subtitle)
 								.font(.caption)
 								.fontWeight(.light)
+								.foregroundStyle(bottomPanelAppearance.subtitleColor)
 						}
+						Spacer()
 						VStack(spacing: 3) {
 							Spacer()
-								.frame(height: 12)
+								.frame(height: 11)
 							Button {
 								
 							} label: {
 								Text("GET")
 									.frame(width: 72, height: 28)
-									.background(Color(white: 0.35).opacity(0.65))
+									.background(bottomPanelAppearance.buyButtonColor)
 									.clipShape(Capsule())
 									.font(.callout)
 									.fontWeight(.bold)
@@ -60,7 +71,7 @@ struct HeaderAppView: View {
 							}
 							Text("In-App Purchases")
 								.font(.system(size: 8))
-								.foregroundStyle(.gray)
+								.foregroundStyle(bottomPanelAppearance.inAppPurchaseColor)
 						}
 					}
 					.frame(height: 36)
@@ -75,6 +86,30 @@ struct HeaderAppView: View {
     }
 }
 
+protocol BottomPanelAppearance {
+	var titleColor: Color { get }
+	var subtitleColor: Color { get }
+	var buyButtonColor: Color { get }
+	var inAppPurchaseColor: Color { get }
+	var colorScheme: ColorScheme { get }
+}
+
+struct BottomPanelLightAppearance: BottomPanelAppearance {
+	var titleColor = Color.white
+	var subtitleColor = Color.white
+	var buyButtonColor = Color(white: 0.8).opacity(0.65)
+	var inAppPurchaseColor = Color(white: 0.9)
+	var colorScheme = ColorScheme.dark
+}
+
+struct BottomPanelDarkAppearance: BottomPanelAppearance {
+	var titleColor = Color.black
+	var subtitleColor = Color.black
+	var buyButtonColor = Color(white: 0.35).opacity(0.65)
+	var inAppPurchaseColor = Color(white: 0.35)
+	var colorScheme = ColorScheme.light
+}
+
 #Preview {
-    HeaderAppView()
+    HeaderAppView(model: HeaderAppViewModel(app: MockData.apps[0]))
 }

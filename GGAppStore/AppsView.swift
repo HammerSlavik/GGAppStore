@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct AppsView: View {
+	@StateObject var viewModel = AppsViewModel(service: AppViewService())
     var body: some View {
 		ScrollView {
 			VStack {
-				HeaderCategoryView()
+				HeaderCategoryView(models: viewModel.headerAppViewModels)
 				Spacer()
 					.frame(height: 30)
 				Divider()
