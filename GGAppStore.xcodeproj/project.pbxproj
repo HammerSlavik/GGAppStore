@@ -16,9 +16,10 @@
 		1B05E6BD2BF67B76006F403A /* GGAppStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6BC2BF67B76006F403A /* GGAppStoreUITestsLaunchTests.swift */; };
 		1B05E6CA2BF67DB2006F403A /* HeaderCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6C92BF67DB2006F403A /* HeaderCategoryView.swift */; };
 		1B05E6CC2BF67E27006F403A /* PreviewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6CB2BF67E27006F403A /* PreviewCategoryView.swift */; };
-		1B05E6CE2BF67E5D006F403A /* SmallGridCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6CD2BF67E5D006F403A /* SmallGridCategoryView.swift */; };
-		1B05E6D02BF67E85006F403A /* LargeGridCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6CF2BF67E85006F403A /* LargeGridCategoryView.swift */; };
+		1B05E6CE2BF67E5D006F403A /* GridCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6CD2BF67E5D006F403A /* GridCategoryView.swift */; };
 		1B05E6D42BF680FF006F403A /* HeaderAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05E6D32BF680FF006F403A /* HeaderAppView.swift */; };
+		1B0A54ED2C067E9F0016E0C2 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A54EC2C067E9F0016E0C2 /* GridLayout.swift */; };
+		1B0A54EF2C06847F0016E0C2 /* GetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A54EE2C06847F0016E0C2 /* GetButton.swift */; };
 		1B26D6662BF7F0C0000C087A /* SmallGridAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26D6652BF7F0C0000C087A /* SmallGridAppView.swift */; };
 		1B26D6682BF8057B000C087A /* LargeGridAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26D6672BF8057B000C087A /* LargeGridAppView.swift */; };
 		1B26D66A2BF80932000C087A /* PreviewAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26D6692BF80932000C087A /* PreviewAppView.swift */; };
@@ -61,9 +62,10 @@
 		1B05E6BC2BF67B76006F403A /* GGAppStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGAppStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1B05E6C92BF67DB2006F403A /* HeaderCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryView.swift; sourceTree = "<group>"; };
 		1B05E6CB2BF67E27006F403A /* PreviewCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCategoryView.swift; sourceTree = "<group>"; };
-		1B05E6CD2BF67E5D006F403A /* SmallGridCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGridCategoryView.swift; sourceTree = "<group>"; };
-		1B05E6CF2BF67E85006F403A /* LargeGridCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeGridCategoryView.swift; sourceTree = "<group>"; };
+		1B05E6CD2BF67E5D006F403A /* GridCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCategoryView.swift; sourceTree = "<group>"; };
 		1B05E6D32BF680FF006F403A /* HeaderAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAppView.swift; sourceTree = "<group>"; };
+		1B0A54EC2C067E9F0016E0C2 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		1B0A54EE2C06847F0016E0C2 /* GetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetButton.swift; sourceTree = "<group>"; };
 		1B26D6652BF7F0C0000C087A /* SmallGridAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGridAppView.swift; sourceTree = "<group>"; };
 		1B26D6672BF8057B000C087A /* LargeGridAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeGridAppView.swift; sourceTree = "<group>"; };
 		1B26D6692BF80932000C087A /* PreviewAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewAppView.swift; sourceTree = "<group>"; };
@@ -130,11 +132,12 @@
 				1B05E6D32BF680FF006F403A /* HeaderAppView.swift */,
 				1B05E6CB2BF67E27006F403A /* PreviewCategoryView.swift */,
 				1B26D6692BF80932000C087A /* PreviewAppView.swift */,
-				1B05E6CF2BF67E85006F403A /* LargeGridCategoryView.swift */,
-				1B26D6672BF8057B000C087A /* LargeGridAppView.swift */,
-				1B05E6CD2BF67E5D006F403A /* SmallGridCategoryView.swift */,
+				1B05E6CD2BF67E5D006F403A /* GridCategoryView.swift */,
 				1B26D6652BF7F0C0000C087A /* SmallGridAppView.swift */,
+				1B26D6672BF8057B000C087A /* LargeGridAppView.swift */,
+				1B0A54EC2C067E9F0016E0C2 /* GridLayout.swift */,
 				1B26D66B2BF80D2C000C087A /* GridDivider.swift */,
+				1B0A54EE2C06847F0016E0C2 /* GetButton.swift */,
 				1B58B1F22BFA329A001BD335 /* Service */,
 				1B58B1EF2BFA31A4001BD335 /* ViewModel */,
 				1B58B1EC2BFA30D9001BD335 /* Model */,
@@ -334,21 +337,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B05E6D02BF67E85006F403A /* LargeGridCategoryView.swift in Sources */,
 				1B26D66C2BF80D2C000C087A /* GridDivider.swift in Sources */,
 				1B26D66A2BF80932000C087A /* PreviewAppView.swift in Sources */,
 				1B58B1F72BFA3516001BD335 /* MockData.swift in Sources */,
 				1B26D6662BF7F0C0000C087A /* SmallGridAppView.swift in Sources */,
 				1B58B1F12BFA31C1001BD335 /* AppsViewModel.swift in Sources */,
-				1B05E6CE2BF67E5D006F403A /* SmallGridCategoryView.swift in Sources */,
+				1B05E6CE2BF67E5D006F403A /* GridCategoryView.swift in Sources */,
 				1B26D6682BF8057B000C087A /* LargeGridAppView.swift in Sources */,
 				1B05E6D42BF680FF006F403A /* HeaderAppView.swift in Sources */,
 				1B05E6A22BF67B74006F403A /* AppsView.swift in Sources */,
 				1B05E6A02BF67B74006F403A /* GGAppStoreApp.swift in Sources */,
 				1B58B1F42BFA331C001BD335 /* AppViewService.swift in Sources */,
 				1B05E6CA2BF67DB2006F403A /* HeaderCategoryView.swift in Sources */,
+				1B0A54EF2C06847F0016E0C2 /* GetButton.swift in Sources */,
 				1B58B1F92BFA4DAF001BD335 /* UIImage+AverageColor.swift in Sources */,
 				1B7F5A102BF9516900368F2E /* AppInfo.swift in Sources */,
+				1B0A54ED2C067E9F0016E0C2 /* GridLayout.swift in Sources */,
 				1B05E6CC2BF67E27006F403A /* PreviewCategoryView.swift in Sources */,
 				1B58B1FB2BFA4F39001BD335 /* UIColor+Luminance.swift in Sources */,
 			);

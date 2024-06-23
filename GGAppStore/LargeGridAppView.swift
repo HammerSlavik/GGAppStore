@@ -31,16 +31,7 @@ struct LargeGridAppView: View {
 					.foregroundStyle(.gray)
 				Spacer()
 				HStack {
-					Button {
-						
-					} label: {
-						Text("GET")
-							.frame(width: 72, height: 28)
-							.background(Color.gray.opacity(0.15))
-							.clipShape(Capsule())
-							.font(.callout)
-							.fontWeight(.bold)
-					}
+					GetButton()
 					Text("In-App\nPurchases")
 						.font(.system(size: 8))
 						.foregroundStyle(.gray)

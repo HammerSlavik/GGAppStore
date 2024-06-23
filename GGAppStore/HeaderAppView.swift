@@ -60,15 +60,8 @@ struct HeaderAppView: View {
 						VStack(spacing: 4) {
 							Spacer()
 								.frame(height: 10)
-							Button {} label: {
-								Text("GET")
-									.frame(width: 72, height: 28)
-									.background(bottomPanelAppearance.buyButtonColor)
-									.clipShape(Capsule())
-									.font(.callout)
-									.fontWeight(.bold)
-									.foregroundStyle(.white)
-							}
+							GetButton(background: bottomPanelAppearance.buyButtonColor)
+								.foregroundStyle(.white)
 							Text("In-App Purchases")
 								.font(.system(size: 8))
 								.foregroundStyle(bottomPanelAppearance.inAppPurchaseColor)

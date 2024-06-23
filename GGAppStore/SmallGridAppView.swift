@@ -33,16 +33,7 @@ struct SmallGridAppView: View {
 			VStack(spacing: 5) {
 				Spacer()
 					.frame(height: 12)
-				Button {
-					
-				} label: {
-					Text("GET")
-						.frame(width: 72, height: 28)
-						.background(Color.gray.opacity(0.15))
-						.clipShape(Capsule())
-						.font(.system(size: 14))
-						.fontWeight(.bold)
-				}
+				GetButton()
 				Text("In-App Purchases")
 					.font(.system(size: 8))
 					.fontWeight(.light)

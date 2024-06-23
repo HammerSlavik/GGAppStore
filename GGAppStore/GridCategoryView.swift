@@ -1,5 +1,5 @@
 //
-//  LargeGridCategoryView.swift
+//  GridCategoryView.swift
 //  GGAppStore
 //
 //  Created by Sviatoslav Yakobchuk on 16.05.2024.
@@ -7,18 +7,15 @@
 
 import SwiftUI
 
-private let iconSide: CGFloat = 88
 private let spacing: CGFloat = 10
 
-struct LargeGridCategoryView: View {
+struct GridCategoryView: View {
 	var models: [AppInfo]
-	private let gridItemLayout = [GridItem(.fixed(iconSide)),
-								  GridItem(.fixed(1/UIScreen.main.scale)),
-								  GridItem(.fixed(iconSide))]
+	let gridLayout: GridLayout
 	var body: some View {
 		VStack(spacing: 6) {
 			HStack {
-				Text("iPhone Essentials")
+				Text("Must-Have Apps")
 					.font(.title2)
 					.fontWeight(.semibold)
 				Spacer()
@@ -27,13 +24,15 @@ struct LargeGridCategoryView: View {
 				})
 			}
 			ScrollView(.horizontal) {
-				LazyHGrid(rows: gridItemLayout, spacing: spacing) {
+				let rows = gridLayout.rows
+				LazyHGrid(rows: rows, spacing: spacing) {
+					let cellRowsCount = rows.count / 2 + 1
 					ForEach(Array(models.enumerated()), id: \.offset) { index, model in
-						LargeGridAppView(model: model)
+						gridLayout.cell(model: model)
 							.containerRelativeFrame(.horizontal)
-						if index % 2 != 1 {
+						if index % cellRowsCount != (cellRowsCount - 1) {
 							GridDivider()
-								.padding(.leading, iconSide + spacing)
+								.padding(.leading, gridLayout.iconSize + spacing)
 						}
 					}
 				}
@@ -46,5 +45,5 @@ struct LargeGridCategoryView: View {
 }
 
 #Preview {
-	LargeGridCategoryView(models: MockData.apps)
+	GridCategoryView(models: MockData.apps, gridLayout: .small)
 }
